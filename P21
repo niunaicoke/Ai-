@@ -1,0 +1,8 @@
+import os
+import pandas as pd
+import numpy as np
+
+web='https://raw.githubusercontent.com/smanihwr/ml-latest-small/master/ratings.csv'
+df = pd.read_csv(web,index_col=0,parse_dates=[0])
+df.head(5)
+rating_matrix = ratings.pivot_table(index=["userId"],columns=["movieId"],values="rating")
